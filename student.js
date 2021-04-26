@@ -21,13 +21,22 @@ function readNC(noControl,students){
         }  
     });
 
+}
+
+//Borrar A travez de posicion
+
+function erase (pos, students){
+    students.splice(pos,1);
+    return students;
 
 }
 
 //Borrar A travez de No. Control
 
-function erase (pos, students){
-    students.splice(pos,1);
+function eraseNC(noControl,students){
+    var idx=0;
+    idx=students.indexOf(noControl);
+    students.splice(idx-1,1);
     return students;
 
 }
@@ -45,4 +54,5 @@ module.exports.create = create;
 module.exports.read = read;
 module.exports.readNC = readNC;
 module.exports.erase = erase;
+module.exports.eraseNC =eraseNC;
 module.exports.update = update;
