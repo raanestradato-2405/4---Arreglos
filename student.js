@@ -50,9 +50,22 @@ function update(pos, newlement, students){
 
 //Actualizar a travez de No. Control Ciertos elementos.
 
+//Listar alumnos con calificacion >= 70
+
+function listaAprobados(students){
+    students.forEach(s =>{
+        if(s.grade>=70){
+            console.log("Nombre: "+s.name + " Calificacion: "+s.grade+"\n");
+        }  
+    });
+
+
+}
+
 module.exports.create = create;
 module.exports.read = read;
 module.exports.readNC = readNC;
 module.exports.erase = erase;
 module.exports.eraseNC =eraseNC;
 module.exports.update = update;
+module.exports.listaAprobados = listaAprobados;
