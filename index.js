@@ -47,6 +47,9 @@ console.log("-------------Despues de Actualizar------------");
 model.read(students);
 console.log("-------------Lista de Aprobados----------------");
 model.listaAprobados(students);
+model.updateNC(students,"16400974",'grade',70);
+console.log("-------------Despues de Actualizar por Parametros------------");
+model.read(students);
 
 
 

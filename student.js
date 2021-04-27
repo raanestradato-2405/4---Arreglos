@@ -50,6 +50,22 @@ function update(pos, newlement, students){
 
 //Actualizar a travez de No. Control Ciertos elementos.
 
+function updateNC (students, numeroControl, campo, nuevoValor){
+    let idx = students.findIndex(s => s.controlNumer == numeroControl);
+
+    if(campo == 'name'){
+        students[idx].name == nuevoValor;
+    } else if(campo == 'controlNumer'){
+        students[idx].controlNumer == nuevoValor;
+    } else if(campo == 'email'){
+        students[idx].email == nuevoValor;
+    } else if(campo == 'grade'){
+        students[idx].grade == nuevoValor;
+    }
+         return students;
+}
+        
+
 //Listar alumnos con calificacion >= 70
 
 function listaAprobados(students){
@@ -68,4 +84,5 @@ module.exports.readNC = readNC;
 module.exports.erase = erase;
 module.exports.eraseNC =eraseNC;
 module.exports.update = update;
+module.exports.updateNC = updateNC;
 module.exports.listaAprobados = listaAprobados;
